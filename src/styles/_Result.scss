@@ -1,0 +1,46 @@
+.result {
+  background-color: $very-dark-cyan;
+  border-radius: 15px;
+  padding: 30px 25px 25px;
+  margin-bottom: 0;
+  .res-div {
+    margin-bottom: 35px;
+  }
+  .res-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    h2 {
+      color: $white;
+      font-size: 16px;
+      span {
+        display: block;
+        color: $slightly-dark-grayish-cyan;
+        font-size: 13px;
+      }
+    }
+    p {
+      color: $strong-cyan;
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+  
+  button {
+    background-color: $strong-cyan;
+    width: 100%;
+    color: $very-dark-cyan;
+    border: none;
+    border-radius: 5px;
+    padding: 7.5px 0;
+    font: {
+      size: 20px;
+      family: "Space Mono", monospace;
+      weight: 700;
+    }
+    &:hover {
+      background-color: $light-grayish-cyan;
+    }
+  }
+}

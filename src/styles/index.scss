@@ -1,0 +1,17 @@
+@import "variables";
+@import "Header";
+@import "Main";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: "Space Mono", monospace;
+  background-color: $light-grayish-cyan;
+  padding-top: 50px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

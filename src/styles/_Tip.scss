@@ -1,0 +1,60 @@
+.tip-section {
+
+  .tip-h2 {
+    margin-bottom: 15px;
+  }
+
+  .tip-buttons{
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    grid-gap: 15px;
+  }
+  [type="radio"] {
+    display: none;
+  }
+  [type="radio"]~span {
+    background-color: $very-dark-cyan;
+    display: block;
+    text-align: center;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    padding: 7.5px 0;
+
+    font: {
+      size: 24px;
+      family: "Space Mono", monospace;
+      weight: 700;
+    }
+  }
+  .tip-custom {
+    background-color: $very-light-grayish-cyan;
+    color: $dark-grayish-cyan;
+    border: none;
+    border-radius: 5px;
+    padding: 7.5px 0;
+    font: {
+      size: 24px;
+      family: "Space Mono", monospace;
+      weight: 700;
+    }
+  }
+
+  .tip-custom-input {
+    background-color: $very-light-grayish-cyan;
+    color: $dark-grayish-cyan;
+    border: none;
+    border-radius: 5px;
+    padding: 7.5px 10px;
+    width: 100%;
+    font: {
+      size: 24px;
+      family: "Space Mono", monospace;
+      weight: 700;
+    }
+    &:focus {
+      outline: none;
+      border: 2px solid $strong-cyan;
+    }
+  }
+}

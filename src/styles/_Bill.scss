@@ -1,0 +1,57 @@
+.bill-section {
+  
+  .bill-input-title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bill-error-text {
+    color: red;
+    right: 0;
+    display: none;
+  }
+
+  label {
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+
+  .bill-input {
+    width: 100%;
+    border: none;
+    background-color: $very-light-grayish-cyan;
+    border-radius: 5px;
+    padding: 5px 20px;
+    text-align: right;
+    color: $very-dark-cyan;
+    font: {
+      size: 24px;
+      family: "Space Mono", monospace;
+      weight: 700;
+    }
+    &:focus {
+      outline: none;
+      border: 2px solid $strong-cyan;
+    }
+  }
+}
+
+.bill-section-error {
+  @extend .bill-section;
+  .bill-error-text {
+    color: red;
+    right: 0;
+    display: block;
+  }
+  .bill-input {
+    &:focus {
+      outline: none;
+      border: 2px solid red;
+    }
+  }
+}
