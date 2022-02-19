@@ -37,7 +37,7 @@ const Bill = ({ bill, setBill }) => {
       </div>
 
       <label>
-        <img src={process.env.PUBLIC_URL+"images/icon-dollar.svg"} />
+        <img src="./images/icon-dollar.svg" />
         <input 
           className="bill-input" 
           type="text" 
