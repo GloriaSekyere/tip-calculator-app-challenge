@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Bill = ({ setBill }) => {
+const Bill = ({ bill, setBill }) => {
 
   const [billError, setBillError] = useState(false)
 
@@ -41,6 +41,7 @@ const Bill = ({ setBill }) => {
         <input 
           className="bill-input" 
           type="text" 
+          value={bill}
           onChange={e => handleBillChange(e)}
         />
       </label>

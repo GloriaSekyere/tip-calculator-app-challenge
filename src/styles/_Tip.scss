@@ -12,7 +12,8 @@
   [type="radio"] {
     display: none;
   }
-  [type="radio"]~span {
+
+  .tip-btn {
     background-color: $very-dark-cyan;
     display: block;
     text-align: center;
@@ -27,6 +28,13 @@
       weight: 700;
     }
   }
+
+  .checked {
+    @extend .tip-btn;
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+  }
+
   .tip-custom {
     background-color: $very-light-grayish-cyan;
     color: $dark-grayish-cyan;

@@ -81,7 +81,7 @@
   display: none;
 }
 
-.tip-section [type="radio"] ~ span {
+.tip-section .tip-btn, .tip-section .checked {
   background-color: #00494d;
   display: block;
   text-align: center;
@@ -92,6 +92,11 @@
   font-size: 24px;
   font-family: "Space Mono", monospace;
   font-weight: 700;
+}
+
+.tip-section .checked {
+  background-color: #26c0ab;
+  color: #00494d;
 }
 
 .tip-section .tip-custom {

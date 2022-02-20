@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const People = ({ setPeople }) => {
+const People = ({ people, setPeople }) => {
 
   const [peopleError, setPeopleError] = useState(false)
 
@@ -44,6 +44,7 @@ const People = ({ setPeople }) => {
         <input 
           className="people-input" 
           type="text" 
+          value={people}
           onChange={e => handlePeopleChange(e)}
         />
       </label>

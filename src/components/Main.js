@@ -8,23 +8,28 @@ const Main = () => {
   const [bill, setBill] = useState(null)
   const [tip, setTip] = useState(null)
   const [people, setPeople] = useState(null)
-  const [tipAmount, setTipAmount] = useState(null)
-  const [total, setTotal] =useState(null)
-
-  console.log(tip)
 
   return (
     <main className="main">
-      <Bill setBill={setBill} />
+      <Bill 
+        bill={bill}
+        setBill={setBill} 
+      />
+
       <Tip setTip={setTip} />
-      <People setPeople={setPeople} />
+
+      <People 
+        people={people}
+        setPeople={setPeople} 
+      />
       
       <Result 
         bill={bill}
+        setBill={setBill}
         tip={tip}
-        people={people}
-        setTipAmount={setTipAmount} 
-        setTotal={setTotal} 
+        setTip={setTip}
+        people={people} 
+        setPeople={setPeople}
       />
   </main>
   
