@@ -42,12 +42,12 @@ const Result = ({
         
         <div className="res-text">
           <h2>Tip Amount<span>/ person</span></h2>
-          <p id="tip-amt">${tipAmount}</p>
+          <p>${tipAmount}</p>
         </div>
 
         <div className="res-text">
           <h2>Total<span>/ person</span></h2>
-        <p id="total-amt">${total}</p>
+          <p>${total}</p>
         </div>
         
       </div>
