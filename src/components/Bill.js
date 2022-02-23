@@ -1,56 +1,31 @@
 import { useState } from 'react';
 
-const Bill = ({ bill, setBill }) => {
+const Bill = ({ setBill }) => {
 
   const [billError, setBillError] = useState(false)
 
   const handleBillChange = (e) => {
-    e.target.value == 0 ? 
-      setBillError(true) : 
-      setBillError(false)
-      setBill(e.target.value)
+    e.target.value == 0 ? setBillError(true) : setBillError(false)
+    setBill(e.target.value)
   }
-
-  const noBillError = (
-    <section className="bill-section">
-      <div className="bill-input-title">
-        <h2 className="section-header">Bill</h2>
-        <span className="bill-error-text">Can't be zero</span>
-      </div>
-
-      <label>
-        <img src="./images/icon-dollar.svg" />
-        <input 
-          className="bill-input" 
-          type="text" 
-          onChange={e => handleBillChange(e)}
-        />
-      </label>
-    </section>
-  );
-
-  const yesBillError = (
-    <section className="bill-section-error">
-      <div className="bill-input-title">
-        <h2 className="section-header">Bill</h2>
-        <span className="bill-error-text">Can't be zero</span>
-      </div>
-
-      <label>
-        <img src="./images/icon-dollar.svg" />
-        <input 
-          className="bill-input" 
-          type="text" 
-          value={bill}
-          onChange={e => handleBillChange(e)}
-        />
-      </label>
-    </section>
-  );
 
   return (
     <>
-      {billError ? yesBillError : noBillError}
+    <section className={billError ? "bill-section-error" : "bill-section" }>
+      <div className="bill-input-title">
+        <h2 className="section-header">Bill</h2>
+        <span className="bill-error-text">Can't be zero</span>
+      </div>
+
+      <label>
+        <img src="./images/icon-dollar.svg" />
+        <input 
+          className="bill-input" 
+          type="text" 
+          onChange={e => handleBillChange(e)}
+        />
+      </label>
+    </section>
     </>
     
   )
