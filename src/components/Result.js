@@ -10,7 +10,7 @@ const Result = ({
   const [total, setTotal] = useState(0)
 
   useEffect(() => {
-    if (bill && tip && people) {
+    if (bill && people) {
       setTipAmount(() => {
         let res = Number(bill) * Number(tip) / Number(people)
         return res.toFixed(2)
