@@ -5,9 +5,9 @@ import Tip from "./Tip"
 import { useState } from 'react'
 
 const Main = () => {
-  const [bill, setBill] = useState(null)
+  const [bill, setBill] = useState('')
   const [tip, setTip] = useState(null)
-  const [people, setPeople] = useState(null)
+  const [people, setPeople] = useState('')
 
   return (
     <main className="main">

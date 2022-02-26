@@ -28,9 +28,9 @@ const Result = ({
   }, [tipAmount])
 
   const handleReset = () => {
-    setBill(null)
+    setBill('')
     setTip(null)
-    setPeople(null)
+    setPeople('')
     setTipAmount(0)
     setTotal(0)
   }
