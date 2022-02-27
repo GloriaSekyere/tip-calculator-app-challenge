@@ -10,6 +10,12 @@
   height: auto;
 }
 
+@media screen and (min-width: 1280px) {
+  .header {
+    margin-bottom: 75px;
+  }
+}
+
 .bill-section .bill-input-title, .bill-section-error .bill-input-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,13 +77,11 @@
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-area: 1/1/2/2;
-    -ms-grid-column-align: start;
-        justify-self: start;
   }
 }
 
 .tip-section .tip-h2 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .tip-section .tip-buttons {
@@ -93,7 +97,7 @@
   display: none;
 }
 
-.tip-section .tip-btn, .tip-section .checked {
+.tip-section .tip-btn {
   background-color: #00494d;
   display: block;
   text-align: center;
@@ -104,11 +108,6 @@
   font-size: 24px;
   font-family: "Space Mono", monospace;
   font-weight: 700;
-}
-
-.tip-section .checked {
-  background-color: #26c0ab;
-  color: #00494d;
 }
 
 .tip-section .tip-custom {
@@ -146,6 +145,14 @@
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-area: 2/1/3/2;
+  }
+  .tip-section .tip-buttons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
   }
 }
 
@@ -252,7 +259,7 @@
   font-weight: 700;
 }
 
-.result button {
+.result .reset {
   background-color: #26c0ab;
   width: 100%;
   color: #00494d;
@@ -264,7 +271,7 @@
   font-weight: 700;
 }
 
-.result button:hover {
+.result .reset:hover {
   background-color: #c5e4e7;
 }
 
@@ -278,13 +285,16 @@
     position: relative;
     padding: 50px;
   }
-  .res-text p {
-    font-size: 75px;
+  .result .res-text p {
+    font-size: 50px;
   }
-  button {
+  .result .reset {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    display: block;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+    width: 325px;
   }
 }
 
@@ -315,8 +325,8 @@ section {
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(-webkit-min-content, -webkit-max-content);
-    grid-auto-rows: minmax(min-content, max-content);
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
     grid-column-gap: 40px;
   }
 }
@@ -334,5 +344,15 @@ body {
   padding-top: 50px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    min-height: 100vh;
+    padding-top: 0;
+    display: -ms-grid;
+    display: grid;
+    place-content: center center;
+  }
 }
 /*# sourceMappingURL=index.css.map */

@@ -29,7 +29,7 @@
     }
   }
   
-  button {
+  .reset {
     background-color: $strong-cyan;
     width: 100%;
     color: $very-dark-cyan;
@@ -52,17 +52,20 @@
     grid-area: 1/2/4/3;
     position: relative;
     padding: 50px;
-  }
 
-  .res-text {
-    p {
-      font-size: 75px;
+    .res-text {
+      p {
+        font-size: 50px;
+      }
     }
-  }
-  
-  button {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    
+    .reset {
+      position: absolute;
+      display: block;
+      bottom: 50px;
+      left: 50px;
+      right: 50px;
+      width: 325px;
+    }
   }
 }
