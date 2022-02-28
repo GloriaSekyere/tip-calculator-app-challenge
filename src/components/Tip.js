@@ -4,7 +4,6 @@ const Tip = ({ setTip }) => {
   const [isCustom, setIsCustom] = useState(false)
   
   const handleTipChange = (e) => {
-    e.target.className = "selected" 
     setTip(e.target.value)
     setIsCustom(false)
   }
