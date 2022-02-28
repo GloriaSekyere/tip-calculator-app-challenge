@@ -93,7 +93,7 @@
   grid-gap: 15px;
 }
 
-.tip-section .tip-btn {
+.tip-section .tip-btn, .tip-section .selected {
   background-color: #00494d;
   display: block;
   text-align: center;
@@ -104,6 +104,16 @@
   font-size: 24px;
   font-family: "Space Mono", monospace;
   font-weight: 700;
+}
+
+.tip-section .tip-btn:active, .tip-section .selected:active, .tip-section .tip-btn:focus, .tip-section .selected:focus {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.tip-section .selected {
+  background-color: #26c0ab;
+  color: #00494d;
 }
 
 .tip-section .tip-custom {
@@ -150,14 +160,10 @@
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
   }
-  .tip-section .tip-btn:hover {
+  .tip-section .tip-btn:hover, .tip-section .selected:hover {
     background-color: #9ee8e0;
     color: #00494d;
     cursor: pointer;
-  }
-  .tip-section .tip-btn:focus {
-    background-color: #26c0ab;
-    color: #00494d;
   }
   .tip-section .tip-custom:hover {
     cursor: pointer;

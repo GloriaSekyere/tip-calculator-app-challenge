@@ -24,6 +24,17 @@
       family: "Space Mono", monospace;
       weight: 700;
     }
+
+    &:active, &:focus {
+      background-color: $strong-cyan;
+      color: $very-dark-cyan;
+    }
+  }
+
+  .selected {
+    @extend .tip-btn;
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
   }
 
   .tip-custom {
@@ -73,10 +84,6 @@
         background-color: #9ee8e0;
         color: $very-dark-cyan;
         cursor: pointer;
-      }
-      &:focus {
-        background-color: $strong-cyan;
-        color: $very-dark-cyan;
       }
     }
 
