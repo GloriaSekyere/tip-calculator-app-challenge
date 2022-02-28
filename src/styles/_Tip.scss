@@ -9,10 +9,7 @@
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
     grid-gap: 15px;
   }
-  [type="radio"] {
-    display: none;
-  }
-
+  
   .tip-btn {
     background-color: $very-dark-cyan;
     display: block;
@@ -69,6 +66,24 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: auto auto;
+    }
+
+    .tip-btn {
+      &:hover {
+        background-color: #9ee8e0;
+        color: $very-dark-cyan;
+        cursor: pointer;
+      }
+      &:focus {
+        background-color: $strong-cyan;
+        color: $very-dark-cyan;
+      }
+    }
+
+    .tip-custom {
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

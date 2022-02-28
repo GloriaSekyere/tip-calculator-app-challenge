@@ -93,10 +93,6 @@
   grid-gap: 15px;
 }
 
-.tip-section [type="radio"] {
-  display: none;
-}
-
 .tip-section .tip-btn {
   background-color: #00494d;
   display: block;
@@ -153,6 +149,18 @@
         grid-template-columns: repeat(3, 1fr);
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
+  }
+  .tip-section .tip-btn:hover {
+    background-color: #9ee8e0;
+    color: #00494d;
+    cursor: pointer;
+  }
+  .tip-section .tip-btn:focus {
+    background-color: #26c0ab;
+    color: #00494d;
+  }
+  .tip-section .tip-custom:hover {
+    cursor: pointer;
   }
 }
 
@@ -271,10 +279,6 @@
   font-weight: 700;
 }
 
-.result .reset:hover {
-  background-color: #c5e4e7;
-}
-
 @media screen and (min-width: 1280px) {
   .result {
     -ms-grid-row: 1;
@@ -295,6 +299,9 @@
     left: 50px;
     right: 50px;
     width: 325px;
+  }
+  .result .reset:hover {
+    background-color: #9ee8e0;
   }
 }
 

@@ -41,9 +41,6 @@
       family: "Space Mono", monospace;
       weight: 700;
     }
-    &:hover {
-      background-color: $light-grayish-cyan;
-    }
   }
 }
 
@@ -66,6 +63,10 @@
       left: 50px;
       right: 50px;
       width: 325px;
+      
+      &:hover {
+        background-color: #9ee8e0;
+      }
     }
   }
 }
