@@ -8,14 +8,25 @@ const Result = ({
 
   const [tipAmount, setTipAmount] = useState(0)
   const [total, setTotal] = useState(0)
+  const [resetEnabled, setResetEnabled] = useState(false)
 
   useEffect(() => {
+
+    // Calculate tip amount if bill and people is provided
     if (bill && people) {
       setTipAmount(() => {
         let res = Number(bill) * Number(tip) / Number(people)
         return res.toFixed(2)
       })
     }
+
+    // Enable reset button if any of the inputs isn't empty
+    if (bill || people || tip) {
+      setResetEnabled(true)
+    } else {
+      setResetEnabled(false)
+    }
+
   }, [bill, tip, people])
 
   useEffect(() => {
@@ -26,6 +37,10 @@ const Result = ({
       })
     }
   }, [tipAmount])
+
+  useEffect(() => {
+    
+  }, [bill, people, tip])
 
   const handleReset = () => {
     setBill('')
@@ -52,10 +67,10 @@ const Result = ({
         
       </div>
 
-      <button 
-        className="reset"
-        onClick={handleReset}
-      >RESET</button>
+      {resetEnabled ? 
+        (<button className="reset" onClick={handleReset}>RESET</button>) : 
+        (<button className="reset disabled" disabled>RESET</button>)
+      }
 
     </section>
   )

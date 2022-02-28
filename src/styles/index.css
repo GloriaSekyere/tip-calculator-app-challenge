@@ -267,7 +267,7 @@
   font-weight: 700;
 }
 
-.result .reset {
+.result .reset, .result .disabled {
   background-color: #26c0ab;
   width: 100%;
   color: #00494d;
@@ -277,6 +277,10 @@
   font-size: 20px;
   font-family: "Space Mono", monospace;
   font-weight: 700;
+}
+
+.result .disabled {
+  background-color: #0c686d;
 }
 
 @media screen and (min-width: 1280px) {
@@ -292,7 +296,7 @@
   .result .res-text p {
     font-size: 50px;
   }
-  .result .reset {
+  .result .reset, .result .disabled {
     position: absolute;
     display: block;
     bottom: 50px;
@@ -300,8 +304,13 @@
     right: 50px;
     width: 325px;
   }
-  .result .reset:hover {
+  .result .reset:hover, .result .disabled:hover {
     background-color: #9ee8e0;
+    cursor: pointer;
+  }
+  .result .disabled:hover {
+    background-color: #0c686d;
+    cursor: pointer;
   }
 }
 
