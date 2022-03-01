@@ -22,13 +22,61 @@ const Tip = ({ setTip }) => {
       <h2 className="section-header tip-h2">Select Tip %</h2>
 
       <div className="tip-buttons">
-        <button className="tip-btn" value="0.05" onClick={e => handleTipChange(e)}>5%</button>
-        <button className="tip-btn" value="0.10" onClick={e => handleTipChange(e)}>10%</button>
-        <button className="tip-btn" value="0.15" onClick={e => handleTipChange(e)}>15%</button>
-        <button className="tip-btn" value="0.25" onClick={e => handleTipChange(e)}>25%</button>
-        <button className="tip-btn" value="0.50" onClick={e => handleTipChange(e)}>50%</button>
+        <label>
+          <input 
+            name="tip"
+            type='radio'
+            value="0.05" 
+            onChange={e => handleTipChange(e)} 
+          />
+          <span className="tip-btn">5%</span>
+        </label>
+
+        <label>
+          <input 
+            name="tip"
+            type='radio'
+            value="0.10" 
+            onChange={e => handleTipChange(e)} 
+          />
+          <span className="tip-btn">10%</span>
+        </label>
+
+        <label>
+          <input 
+            name="tip"
+            type='radio'
+            value="0.15" 
+            onChange={e => handleTipChange(e)} 
+          />
+          <span className="tip-btn">15%</span>
+        </label>
+
+        <label>
+          <input 
+            name="tip"
+            type='radio'
+            value="0.25" 
+            onChange={e => handleTipChange(e)} 
+          />
+          <span className="tip-btn">25%</span>
+        </label>
+
+        <label>
+          <input 
+            name="tip"
+            type='radio'
+            value="0.50" 
+            onChange={e => handleTipChange(e)} 
+          />
+          <span className="tip-btn">50%</span>
+        </label>
+        
         {!isCustom ? 
-          (<button className="tip-custom" value="" onClick={handleClickCustom}>Custom</button>) :
+          (<label>
+            <input type="radio" name="tip" value="" onClick={handleClickCustom} />
+            <span className="tip-custom">Custom</span>
+          </label>) :
           (<input type="text" className="tip-custom-input" onChange={e => handleCustomTip(e)} autoFocus/>)
         }
       </div>

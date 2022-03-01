@@ -9,7 +9,15 @@
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
     grid-gap: 15px;
   }
-  
+  [type = "radio"] {
+    display: none;
+  }
+
+  [type = "radio"]:checked ~ span {
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+  }
+
   .tip-btn {
     background-color: $very-dark-cyan;
     display: block;
@@ -31,18 +39,14 @@
     }
   }
 
-  .selected {
-    @extend .tip-btn;
-    background-color: $strong-cyan;
-    color: $very-dark-cyan;
-  }
-
   .tip-custom {
     background-color: $very-light-grayish-cyan;
+    display: block;
     color: $dark-grayish-cyan;
     border: none;
     border-radius: 5px;
     padding: 7.5px 0;
+    text-align: center;
     font: {
       size: 24px;
       family: "Space Mono", monospace;

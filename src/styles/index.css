@@ -93,7 +93,16 @@
   grid-gap: 15px;
 }
 
-.tip-section .tip-btn, .tip-section .selected {
+.tip-section [type="radio"] {
+  display: none;
+}
+
+.tip-section [type="radio"]:checked ~ span {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.tip-section .tip-btn {
   background-color: #00494d;
   display: block;
   text-align: center;
@@ -106,22 +115,19 @@
   font-weight: 700;
 }
 
-.tip-section .tip-btn:active, .tip-section .selected:active, .tip-section .tip-btn:focus, .tip-section .selected:focus {
-  background-color: #26c0ab;
-  color: #00494d;
-}
-
-.tip-section .selected {
+.tip-section .tip-btn:active, .tip-section .tip-btn:focus {
   background-color: #26c0ab;
   color: #00494d;
 }
 
 .tip-section .tip-custom {
   background-color: #f4fafa;
+  display: block;
   color: #5e7a7d;
   border: none;
   border-radius: 5px;
   padding: 7.5px 0;
+  text-align: center;
   font-size: 24px;
   font-family: "Space Mono", monospace;
   font-weight: 700;
@@ -160,7 +166,7 @@
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
   }
-  .tip-section .tip-btn:hover, .tip-section .selected:hover {
+  .tip-section .tip-btn:hover {
     background-color: #9ee8e0;
     color: #00494d;
     cursor: pointer;
