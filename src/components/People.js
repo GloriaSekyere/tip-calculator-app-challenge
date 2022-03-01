@@ -20,15 +20,14 @@ const People = ({ people, setPeople }) => {
 
       <div className='people-input-group'>
         <img src="./images/icon-person.svg" alt="person" />
-        <label for="people">
-          <input 
-            id="people"
-            className="people-input" 
-            type="text" 
-            onChange={e => handlePeopleChange(e)}
-            value={people}
-          />
-        </label>
+        <label for="people">People</label>
+        <input 
+          id="people"
+          className="people-input" 
+          type="text" 
+          onChange={e => handlePeopleChange(e)}
+          value={people}
+        />
       </div>
 
     </section>

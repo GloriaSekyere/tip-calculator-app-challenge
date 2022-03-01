@@ -19,15 +19,15 @@ const Bill = ({ bill, setBill }) => {
 
       <div className='bill-input-group'>
         <img src="./images/icon-dollar.svg" alt="dollars" />
-        <label for="bill">
-          <input 
-            id="bill"
-            className="bill-input" 
-            type="text" 
-            onChange={e => handleBillChange(e)}
-            value={bill}
-          />
-        </label>
+        <label for="bill">Bill</label>
+        <input 
+          id="bill"
+          className="bill-input" 
+          type="text" 
+          onChange={e => handleBillChange(e)}
+          value={bill}
+        />
+        
       </div>
     </section>
     </>

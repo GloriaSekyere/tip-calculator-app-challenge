@@ -47,6 +47,10 @@
           transform: translate(0, -50%);
 }
 
+.bill-section label, .bill-section-error label {
+  font-size: 0;
+}
+
 .bill-section .bill-input, .bill-section-error .bill-input {
   width: 100%;
   border: none;
@@ -205,6 +209,10 @@
   left: 20px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+}
+
+.people-section label, .people-section-error label {
+  font-size: 0;
 }
 
 .people-section .people-input, .people-section-error .people-input {

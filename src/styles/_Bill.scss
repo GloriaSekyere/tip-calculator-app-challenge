@@ -21,6 +21,10 @@
     left: 20px;
     transform: translate(0, -50%);
   }
+  
+  label {
+    font-size: 0;
+  }
 
   .bill-input {
     width: 100%;
