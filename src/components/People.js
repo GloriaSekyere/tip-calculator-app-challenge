@@ -18,15 +18,17 @@ const People = ({ people, setPeople }) => {
         <span className="people-error-text">Can't be zero</span>
       </div>
 
-      <label>
-        <img src="./images/icon-person.svg" />
-        <input 
-          className="people-input" 
-          type="text" 
-          onChange={e => handlePeopleChange(e)}
-          value={people}
-        />
-      </label>
+      <div className='people-input-group'>
+        <img src="./images/icon-person.svg" alt="person" />
+        <label>
+          <input 
+            className="people-input" 
+            type="text" 
+            onChange={e => handlePeopleChange(e)}
+            value={people}
+          />
+        </label>
+      </div>
 
     </section>
     </>

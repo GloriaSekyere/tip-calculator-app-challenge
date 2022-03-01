@@ -17,15 +17,17 @@ const Bill = ({ bill, setBill }) => {
         <span className="bill-error-text">Can't be zero</span>
       </div>
 
-      <label>
-        <img src="./images/icon-dollar.svg" />
-        <input 
-          className="bill-input" 
-          type="text" 
-          onChange={e => handleBillChange(e)}
-          value={bill}
-        />
-      </label>
+      <div className='bill-input-group'>
+        <img src="./images/icon-dollar.svg" alt="dollars" />
+        <label>
+          <input 
+            className="bill-input" 
+            type="text" 
+            onChange={e => handleBillChange(e)}
+            value={bill}
+          />
+        </label>
+      </div>
     </section>
     </>
     

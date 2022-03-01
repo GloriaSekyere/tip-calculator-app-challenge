@@ -2,10 +2,15 @@
   display: grid;
   place-content: center;
   margin-bottom: 40px;
+
   img {
     max-width: 100%;
     height: auto;
   } 
+
+  h1 {
+    font-size: 0;
+  }
 }
 
 @media screen and (min-width: 1280px) {

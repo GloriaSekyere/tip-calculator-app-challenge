@@ -11,14 +11,15 @@
     display: none;
   }
 
-  label {
+  .bill-input-group {
     position: relative;
   }
 
   img {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 20px;
+    transform: translate(0, -50%);
   }
 
   .bill-input {
