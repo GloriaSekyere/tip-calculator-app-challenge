@@ -20,8 +20,9 @@ const People = ({ people, setPeople }) => {
 
       <div className='people-input-group'>
         <img src="./images/icon-person.svg" alt="person" />
-        <label>
+        <label for="people">
           <input 
+            id="people"
             className="people-input" 
             type="text" 
             onChange={e => handlePeopleChange(e)}
