@@ -44,6 +44,13 @@
       border: 2px solid $strong-cyan;
     }
   }
+
+  .bill-input::-webkit-outer-spin-button,
+  .bill-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+  }
 }
 
 .bill-section-error {

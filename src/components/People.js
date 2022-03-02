@@ -24,7 +24,7 @@ const People = ({ people, setPeople }) => {
         <input 
           id="people"
           className="people-input" 
-          type="text" 
+          type="number" 
           onChange={e => handlePeopleChange(e)}
           value={people}
         />

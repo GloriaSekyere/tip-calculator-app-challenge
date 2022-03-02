@@ -41,6 +41,13 @@
       border: 2px solid $strong-cyan;
     }
   }
+
+  .people-input::-webkit-outer-spin-button,
+  .people-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+  }
 }
 
 .people-section-error {

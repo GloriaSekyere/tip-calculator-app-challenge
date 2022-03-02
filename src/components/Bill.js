@@ -23,7 +23,7 @@ const Bill = ({ bill, setBill }) => {
         <input 
           id="bill"
           className="bill-input" 
-          type="text" 
+          type="number" 
           onChange={e => handleBillChange(e)}
           value={bill}
         />
