@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import person from '../images/icon-person.svg';
 
 const People = ({ people, setPeople }) => {
 
@@ -19,7 +20,7 @@ const People = ({ people, setPeople }) => {
       </div>
 
       <div className='people-input-group'>
-        <img src="./images/icon-person.svg" alt="person" />
+        <img src={person} alt="person" />
         <label for="people">People</label>
         <input 
           id="people"

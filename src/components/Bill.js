@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import dollar from '../images/icon-dollar.svg';
 
 const Bill = ({ bill, setBill }) => {
 
@@ -18,7 +19,7 @@ const Bill = ({ bill, setBill }) => {
       </div>
 
       <div className='bill-input-group'>
-        <img src="./images/icon-dollar.svg" alt="dollars" />
+        <img src={dollar} alt="dollars" />
         <label for="bill">Bill</label>
         <input 
           id="bill"
