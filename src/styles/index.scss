@@ -19,9 +19,6 @@ body {
 
 @media screen and (min-width: 1280px) {
   body {
-    min-height: 100vh;
-    padding-top: 0;
-    display: grid;
-    place-content: center center;
+    padding-top: 100px;
   }
 }  
